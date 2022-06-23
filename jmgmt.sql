@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 23, 2022 at 07:26 AM
+-- Generation Time: Jun 23, 2022 at 01:15 PM
 -- Server version: 8.0.27
 -- PHP Version: 7.4.26
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 INSERT INTO `admin` (`id`, `fname`, `lname`, `username`, `email`, `phone`, `address`, `city`, `state`, `img`, `role`, `password`) VALUES
 (24, 'Sumeet', 'Bharali', 's.bharali', 'sumeet@admin.com', '12345685', 'Barua chariali', 'Jorhat', 'Assam', 'admin.png', 0, 'admin123'),
-(25, 'Naveen', 'Dutta', 'n.dutta', 'naveen@sales.com', '08656820939', 'Malow ALi', 'Jorhat', 'India', 'admin.png', 1, 'sales123');
+(25, 'Naveen', 'Dutta', 'n.dutta', 'naveen@sales.com', '0865682093', 'Malow ALi2', 'Jorhat', 'India', 'admin.png', 1, 'sales123');
 
 -- --------------------------------------------------------
 
@@ -97,18 +97,7 @@ CREATE TABLE IF NOT EXISTS `invoice` (
   `prodid` int NOT NULL,
   `invordstatus` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `invoice`
---
-
-INSERT INTO `invoice` (`id`, `invnum`, `ordid`, `generatedate`, `ordertotal`, `prodid`, `invordstatus`) VALUES
-(7, 'INVOICE-1655958166439', 82, '2022-06-23', 11946, 12, 0),
-(6, 'INVOICE-1655956787813', 81, '2022-06-23', 11941, 12, 0),
-(8, 'INVOICE-1655959338499', 83, '2022-06-23', 11944, 12, 0),
-(9, 'INVOICE-1655968516624', 85, '2022-06-23', 10945, 12, 0),
-(10, 'INVOICE-1655968705593', 84, '2022-06-23', 10134, 12, 0);
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -140,18 +129,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `psubtotal` int NOT NULL,
   `ordstatus` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `invoice`, `cfname`, `clname`, `cphone`, `cemail`, `caddress`, `caddresssecond`, `ccity`, `cregion`, `czip`, `ccountry`, `ord_date`, `ord_time`, `goldpriceatm`, `pid`, `pcost`, `pgst`, `pgstpercent`, `psubtotal`, `ordstatus`) VALUES
-(85, 'INVOICE-1655968516624', 'pranay', 'kalita', '08638820939', 'pranaykalita2@gmail.com', 'Tarajan Puj mandir', 'oppositre pukhuri', 'Jorhat', 'India', 785001, 'India', '2022-06-23', '12:51:00', 5067, 12, 10134, 811, 8, 10945, 0),
-(84, 'INVOICE-1655968705593', 'pranay', 'kalita', '08638820939', 'pranaykalita2@gmail.com', 'Tarajan Puj mandir', 'oppositre pukhuri', 'Jorhat', 'India', 785001, 'India', '2022-06-23', '12:50:00', 5067, 12, 10134, 0, 0, 10134, 0),
-(83, 'INVOICE-1655959338499', 'pranay', 'kalita', '08638820939', 'pranaykalita2@gmail.com', 'Tarajan Puj mandir', 'oppositre pukhuri', 'Jorhat', 'India', 785001, 'India', '2022-06-23', '10:16:00', 5061, 12, 10122, 1822, 18, 11944, 0),
-(82, 'INVOICE-1655958166439', 'pranay', 'kalita', '08638820939', 'pranaykalita2@gmail.com', 'Tarajan Puj mandir', 'oppositre pukhuri', 'Jorhat', 'India', 785001, 'India', '2022-06-23', '09:54:00', 5062, 12, 10123, 1822, 18, 11946, 0),
-(81, 'INVOICE-1655956787813', 'pranay', 'kalita', '08638820939', 'pranaykalita2@gmail.com', 'Tarajan Puj mandir', 'oppositre pukhuri', 'Jorhat', 'India', 785001, 'India', '2022-06-23', '09:30:00', 5060, 12, 10119, 1822, 18, 11941, 1);
+) ENGINE=MyISAM AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -177,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `qty`, `size`, `price`, `description`, `weight`, `img`) VALUES
-(12, 'platinium breslate', 94, '2cm', 8098.18, 'STYLING :Casual Wear\r\nCrafted in the brilliance of platinum, this bracelet is the perfect companion to all your outfits!', 2, 'download.jpg');
+(12, 'platinium breslate', 90, '2cm', 8098.18, 'STYLING :Casual Wear\r\nCrafted in the brilliance of platinum, this bracelet is the perfect companion to all your outfits!', 2, 'download.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
